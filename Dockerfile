@@ -6,7 +6,7 @@
 #    By: manaccac <manaccac@student.le-101.fr>      +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2020/01/16 11:40:54 by manaccac     #+#   ##    ##    #+#        #
-#    Updated: 2020/01/18 15:35:57 by manaccac    ###    #+. /#+    ###.fr      #
+#    Updated: 2020/02/24 10:34:56 by manaccac         ###   ########lyon.fr    #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -51,6 +51,8 @@ RUN apt-get clean \
 
 #ADD Ajouter des fichiers dans le container
 ADD srcs/default /etc/nginx/sites-available/default
+ADD srcs/default_other /etc/nginx/sites-available/default_other
+ADD srcs/autoindex_change.sh .
 ADD ./srcs/nginx-selfsigned.key /etc/ssl/private/nginx-selfsigned.key
 ADD ./srcs/nginx-selfsigned.crt /etc/ssl/certs/nginx-selfsigned.crt
 ADD ./srcs/dhparam.pem /etc/nginx/dhparam.pem
